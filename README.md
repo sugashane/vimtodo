@@ -41,10 +41,11 @@ A terminal-based, Vim-inspired todo list manager written in Python using the `cu
 |-------------|----------------------------------------|
 | q           | Quit                                   |
 | i           | Insert new todo                        |
+| I           | Insert subtask under current todo      |
 | e           | Edit selected todo                     |
 | x           | Toggle completion                      |
 | d           | Delete todo (copies to clipboard)      |
-| y           | Yank (copy) todo(s) to clipboard       |
+| y           | Yank (copy) todo to clipboard          |
 | p           | Paste todos from clipboard             |
 | V           | Enter visual mode                      |
 | u           | Undo                                   |
@@ -52,7 +53,7 @@ A terminal-based, Vim-inspired todo list manager written in Python using the `cu
 | w           | Save todos                             |
 | j/k         | Move down/up                           |
 | g/G         | Move to top/bottom                     |
-| ESC         | Exit visual/insert/command mode        |
+| ESC         | Cancel/exit to normal mode             |
 
 ## File Storage
 
