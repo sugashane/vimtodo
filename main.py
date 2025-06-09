@@ -111,7 +111,9 @@ class TodoApp:
         self.redo_stack.clear()  # Clear redo stack on a new change
         self.todos.append({"text": text, "completed": False})
         self.save_todos()  # Autosave after adding
-        self.current_line = len(self.todos) - 1
+        # Set current_path to the new todo
+        self.current_path = [len(self.todos) - 1]
+        self.message = "Todo added!"
 
     def edit_todo(self, text: str):
         """Edit the currently selected todo"""
@@ -265,8 +267,8 @@ class TodoApp:
     def enter_visual_mode(self):
         """Enter visual mode"""
         self.mode = "visual"
-        self.visual_start = self.current_line
-        self.visual_end = self.current_line
+        self.visual_start = self.current_path.copy()
+        self.visual_end = self.current_path.copy()
         self.message = "Visual mode"
 
     def exit_visual_mode(self):
